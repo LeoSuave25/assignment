@@ -4,16 +4,16 @@ title = "Vigenere Cipher"
 print("\033[32m",fig.figlet_format(title),"\033[m")
 print(fig.figlet_format("Made by: Leoj M Suaverdez",font="bubble"))
 # ==========================Function=============================
-# Repeat the key until it became the same length as the plain_text
-def repeat_word(key, string):
-    target_length = len(string)
+# Repeat the key until it became the same length as the raw_text
+def repeat_word(key, raw_text):
+    target_length = len(raw_text)
     repeated_word = key * target_length
-    if len(string)==len(key):
+    if len(raw_text)==len(key):
         return key
-    elif len(string)<len(key):
-        return key[0:len(string)]
+    elif len(raw_text)<len(key):
+        return key[0:len(raw_text)]
     else:
-        return repeated_word[0:len(string)]
+        return repeated_word[0:len(raw_text)]
 # =================================================================
 # Ask User text and save it to variable, validate it to be uppercase letters with no spaces
 while True:
